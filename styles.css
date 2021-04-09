@@ -1,0 +1,610 @@
+@font-face {
+    font-family: Metropolis;
+    font-weight: 700;
+    src: url(./fonts/Metropolis-Bold.woff);
+}
+
+@font-face {
+    font-family: Metropolis;
+    font-weight: 300;
+    src: url(./fonts/Metropolis-Light.woff);
+}
+
+@font-face {
+    font-family: Metropolis;
+    font-weight: 200;
+    src: url(./fonts/Metropolis-ExtraLight.woff);
+}
+
+@font-face {
+    font-family: Metropolis;
+    font-weight: 500;
+    src: url(./fonts/Metropolis-Medium.woff);
+}
+
+@font-face {
+    font-family: Metropolis;
+    font-weight: 400;
+    src: url(./fonts/Metropolis-Regular.woff);
+}
+
+@font-face {
+    font-family: Metropolis;
+    font-style: italic;
+    font-weight: 500;
+    src: url(./fonts/Metropolis-MediumItalic.woff);
+}
+
+@font-face {
+    font-family: Oswald;
+    font-weight: 300;
+    src: url(./fonts/Oswald-Light.woff);
+}
+
+@font-face {
+    font-family: Oswald;
+    font-weight: 500;
+    src: url(./fonts/Oswald-Medium.woff);
+}
+
+@font-face {
+    font-family: Photograph;
+    src: url(./fonts/Photograph-Signature.woff);
+}
+
+@-webkit-keyframes fading {
+    0% { 
+        opacity: 0;
+        top: 100%;    
+    }
+
+    50% {
+        opacity: 1;
+    }
+    
+    100% {
+        opacity: 0;
+        top: 30%;
+    }
+}
+
+@-moz-keyframes fading {
+    0% { 
+        opacity: 0;
+        top: 100%;    
+    }
+
+    50% {
+        opacity: 1;
+    }
+    
+    100% {
+        opacity: 0;
+        top: 30%;
+    }
+}
+
+@-o-keyframes fading {
+    0% { 
+        opacity: 0;
+        top: 100%;    
+    }
+
+    50% {
+        opacity: 1;
+    }
+    
+    100% {
+        opacity: 0;
+        top: 30%;
+    }
+}
+
+@keyframes fading {
+    0% { 
+        opacity: 0;
+        top: 100%;    
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        top: 30%;
+    }
+}
+
+@-webkit-keyframes fadingchapter {
+    0% { 
+        opacity: 0;
+        top: 100%;    
+    }
+
+    50% {
+        opacity: 1;
+    }
+    
+    100% {
+        opacity: 0;
+        top: -10%;
+    }
+}
+
+@-moz-keyframes fadingchapter {
+    0% { 
+        opacity: 0;
+        top: 100%;    
+    }
+
+    50% {
+        opacity: 1;
+    }
+    
+    100% {
+        opacity: 0;
+        top: -10%;
+    }
+}
+
+@-o-keyframes fadingchapter {
+    0% { 
+        opacity: 0;
+        top: 100%;    
+    }
+
+    50% {
+        opacity: 1;
+    }
+    
+    100% {
+        opacity: 0;
+        top: -10%;
+    }
+}
+
+@keyframes fadingchapter {
+    0% { 
+        opacity: 0;
+        top: 100%;    
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        top: -10%;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#scroll-to-top {
+    display: inline-block;
+    position: fixed;
+    z-index: 1;
+    right: 15px;
+    bottom: 15px;
+    padding: 15px;
+    font-size: 25px;
+    margin: 15px;
+    background-color: rgba(255,255,255,0.25) ;
+    border-radius: 12px;
+    line-height: 25px;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    box-shadow:0 1px 3px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+#scroll-to-top a {
+    color: #003676;
+}
+
+
+
+#quote {
+    background-image: url(./images/3.jpg);
+    clip-path: polygon(0% 70px, 100% 0%, 100% 100%, 0% 430px);
+}
+
+
+#quote2 {
+    background-image: url(./images/2.jpg);
+    clip-path: polygon(0% 0px, 100% 70px, 100% 430px, 0% 500px);
+}
+
+
+#texture {
+    background-image: url(./images/texture.png);
+    background-color: #1b336c;
+    color: white;
+    background-repeat: no-repeat;
+}
+
+#logotexture {
+    background-image: url(./images/logotexture.png);
+    background-repeat: no-repeat;
+    background-position: 84% 94%;
+    background-size: 552px;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1 {
+    font-family: Metropolis;
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 130px;
+}
+h3 {
+    font-family: Metropolis;
+    font-size: 44px;
+    font-weight: 200;
+    color: white;
+    text-align: center;
+}
+
+h5 {
+    font-family: Metropolis;
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.cover {
+    background-image: url(./images/cover.jpg);
+    max-height: 100vh;
+    height: 800px;
+    background-position: center;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cover-animation {
+    max-width: unset;
+    position: absolute;
+    -webkit-animation: fading 5s infinite;
+    -moz-animation: fading 5s infinite;
+    -o-animation: fading 5s infinite;
+    animation: fading 5s infinite;
+}
+
+.quote img {
+    max-width: unset;
+    position: absolute;
+    -webkit-animation: fading 5s infinite;
+    -moz-animation: fading 5s infinite;
+    -o-animation: fading 5s infinite;
+    animation: fading 5s infinite;
+}
+
+.quote {
+    height: 500px;
+    background-position: center;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.quote h1 {
+    text-align: center;
+    color:white;
+    font-weight: 300;
+}
+
+.container {
+    padding-top: 110px;
+    padding-bottom: 110px;
+}
+
+.font-medium {
+    font-weight: 500;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.sketch {
+    padding-top: 60px;
+    padding-bottom: 10px;
+}
+
+.k-logo {
+    padding-top: 60px;
+    padding-bottom: 10px;
+    text-align: center;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+}
+
+.kecc {
+    display: flex;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.kecc2 {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.kecc.vertical {
+    flex-direction: column;
+}
+
+.grow {
+    flex-grow: 1;
+}
+
+.grow-08 {
+    flex-grow: 0.8;
+}
+
+
+p {
+    font-family: Metropolis;
+    font-size: 25px;
+    font-weight: 200;
+}
+
+.header {
+    position:absolute;
+    top: 0px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.header a {
+    font-family: Metropolis;
+    font-size: 20px;
+    font-weight: 500;
+    color: #c9deff;
+    text-shadow: 0 0 3px rgb(0, 18, 86, 0.5);
+    
+}
+
+.header a:hover {
+    text-decoration: none;
+}
+
+.header div {
+    margin: 30px 30px;
+}
+
+.dot {
+    height: 192px;
+    width: 192px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    display: inline-block;
+    transition: box-shadow 800ms cubic-bezier(.65,-1.56,.25,1.95);
+    
+}
+
+.darkblue {
+    background-color: #2f4479;
+}
+
+.dot.darkblue {
+    border: 1px solid #25355f;
+}
+
+.dot.darkblue:hover {
+    box-shadow: 0 0 60px 2px #405384, 0.5rem 0.5rem 30px #152c68;
+}
+
+.lightblue {
+    background-color:#5676b8;
+}
+
+.dot.lightblue {
+    border: 1px solid #4b68a2;
+}
+
+.dot.lightblue:hover {
+    box-shadow: 0 0 60px 2px #85b3ff, 0.5rem 0.5rem 30px #1c48a0;
+}
+
+
+.logobck {
+    display: inline-block;
+    padding: 40px;
+}
+
+.black {
+    background-color: black;
+}
+
+.line {
+    border: 1px solid black;
+}
+
+.sketches {
+    margin-top: 50px;
+}
+
+.oswald {
+    font-family: Oswald;
+    font-weight: 500;
+}
+
+.typography {
+    font-size: 25px;
+}
+
+.oswaldlight {
+font-family: Oswald;
+font-weight: 300;
+}
+
+.metropolismed {
+    font-family: Metropolis;
+    font-weight: 500;
+}
+
+.signature {
+    font-family: Photograph;
+}
+
+.metropolisitalic {
+    font-family: Metropolis;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.justification {
+    padding-bottom: 130px;
+    text-align: center;
+}
+
+.space {
+    padding-bottom: 140px;
+}
+
+.chapters {
+    color:white;
+    margin-top: 70px;
+}
+
+.chapter {
+    background-color: #1b336c;
+    height: 240px;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.chapter .pattern {
+    max-width: unset;
+    position: absolute;
+    -webkit-animation: fadingchapter 5s infinite;
+    -moz-animation: fadingchapter 5s infinite;
+    -o-animation: fadingchapter 5s infinite;
+    animation: fadingchapter 5s infinite;
+}
+
+.digit-one-left {
+    left: -166px;
+    top: -81px;
+}
+
+.digit-one-right {
+    right: -325px;
+    top: -81px;
+}
+
+.digit {
+    position: absolute;
+    width: 500px;
+}
+
+.digit-two-left {
+    left: -194px;
+    top: -339px;
+}
+
+.digit-two-right {
+    right: -117px;
+    top: -26px;
+}
+
+.digit-three-left {
+    left: -170px;
+    top: -302px;
+}
+
+.digit-three-right {
+    right: -97px;
+    top: -16px;
+}
+
+.last {
+    background-color: white;
+    height: 150px;
+}
+
+.site-info {
+    font-size: 18px;
+    margin: 105px;
+}
+
+.logo2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.logo2 img {
+    width: 353px;
+}
+
+
+@media (max-width: 1199.98px) {
+    .cover {
+        background-size: cover;
+    }
+
+    .logo {
+        max-width: 500px;
+    }
+
+    h1 {
+        margin-bottom: 60px;
+        font-size: 40px;
+    }
+
+    h5 {
+        font-size: 23px;
+    }
+
+    .sketches {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .container {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .site-info {
+        font-size: 16px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 23px;
+    }
+
+    #logotexture {
+        background-position: 109% 86%;
+        background-size: 340px;
+    }
+
+}
+
+
+
+
